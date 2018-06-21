@@ -38,7 +38,7 @@ class Song
   end
 
   def self.genre_count
-    self.genres.group_by{ |genre| genre }.map{ |count, genre| [count, genre.size]}
+    self.genres.group_by{ |genre| genre }
 
   end
 end
