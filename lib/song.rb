@@ -38,7 +38,10 @@ class Song
   end
 
   def self.genre_count
-    self.genres.group_by{ |genre| genre }
-
+    genre_count = Hash.new(0)
+    @@genres.each do |art|
+      genre_count[art] += 1
+    end
+    return genre_count
   end
 end
